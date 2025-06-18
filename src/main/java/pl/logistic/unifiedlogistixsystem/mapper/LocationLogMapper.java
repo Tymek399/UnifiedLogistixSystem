@@ -8,11 +8,9 @@ import pl.logistic.unifiedlogistixsystem.model.Unit;
 @Mapper(componentModel = "spring")
 public interface LocationLogMapper {
 
-    @Mapping(source = "unit.id", target = "unitId")
-    LocationLogDto toDto(LocationLog locationLog);
+    LocationLogDto toDto(LocationLog entity);
 
-    @Mapping(target = "unit", expression = "java(unitFromId(dto.getUnitId()))")
-    @Mapping(target = "id", ignore = true)
+
     LocationLog toEntity(LocationLogDto dto);
 
     default Unit unitFromId(Long id) {
@@ -24,3 +22,4 @@ public interface LocationLogMapper {
         return unit;
     }
 }
+

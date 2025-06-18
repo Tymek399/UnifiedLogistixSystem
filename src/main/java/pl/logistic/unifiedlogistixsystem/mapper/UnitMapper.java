@@ -10,6 +10,6 @@ public interface UnitMapper {
 
     UnitDto toDto(Unit entity);
 
-    @Mapping(target = "id", ignore = true)
+
     Unit toEntity(UnitDto dto);
 }
