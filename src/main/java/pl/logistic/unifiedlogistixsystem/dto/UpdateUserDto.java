@@ -6,19 +6,14 @@ import lombok.NoArgsConstructor;
 import pl.logistic.unifiedlogistixsystem.enums.Role;
 
 import java.time.LocalDateTime;
-
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDto {
-    private Long id;
-    private String username;
+public class UpdateUserDto {
     private String email;
     private String firstName;
     private String lastName;
     private Role role;
-    private LocalDateTime createdAt;
-    private LocalDateTime lastLogin;
     private Boolean isActive;
 }

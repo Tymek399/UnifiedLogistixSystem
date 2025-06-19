@@ -1,4 +1,5 @@
 package pl.logistic.unifiedlogistixsystem.dto;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,14 +12,10 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDto {
-    private Long id;
+public class JwtResponseDTO {
+    private String token;
+    private String type = "Bearer";
     private String username;
-    private String email;
-    private String firstName;
-    private String lastName;
     private Role role;
-    private LocalDateTime createdAt;
-    private LocalDateTime lastLogin;
-    private Boolean isActive;
+    private LocalDateTime expiresAt;
 }
